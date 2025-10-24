@@ -25,7 +25,7 @@ const navigate = useNavigate();
             displayName: formData.username
         });
         toast.success('Sign up Successfully');
-        navigate('/login')
+        navigate('/')
     } catch (error) {
         const errorMessage = error.message;
         toast.error(errorMessage)
