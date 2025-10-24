@@ -93,8 +93,8 @@ Keep tone creative but concise.
     <div className="max-w-6xl mx-auto p-3">
       <h1 className="text-3xl md:text-5xl text-center font-bold mt-6">
         Welcome ,{" "}
-        {currentUser.displayName[0].toUpperCase() +
-          currentUser.displayName.slice(1)}
+        {currentUser?.displayName[0]?.toUpperCase() +
+          currentUser?.displayName?.slice(1)}
       </h1>
       <p className="text-center text-2xl mt-3 mb-13">How’s it going?</p>
       <div className="border-2 border-gray-400  rounded p-4">
