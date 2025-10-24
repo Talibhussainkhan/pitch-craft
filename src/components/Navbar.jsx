@@ -137,7 +137,7 @@ const Navbar = () => {
             </Link>
           ))}
           {currentUser ? (
-          <div className="hidden md:flex items-center gap-2">
+          <div className="flex md:hidden items-center gap-2">
             <Link
               onClick={handleLogout}
               className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 text-white bg-black`}
@@ -146,7 +146,7 @@ const Navbar = () => {
             </Link>
           </div>
         ) : (
-          <div className="hidden md:flex items-center gap-4">
+          <div className="flex md:hidden items-center gap-4">
             <Link
               to="/login"
               className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 text-white bg-black`}
