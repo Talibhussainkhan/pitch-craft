@@ -136,13 +136,25 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link
-            to={"/login"}
-            onClick={() => setIsMenuOpen(false)}
-            className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500"
-          >
-            Login
-          </Link>
+          {currentUser ? (
+          <div className="hidden md:flex items-center gap-2">
+            <Link
+              onClick={handleLogout}
+              className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 text-white bg-black`}
+            >
+              Logout
+            </Link>
+          </div>
+        ) : (
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              to="/login"
+              className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 text-white bg-black`}
+            >
+              Login
+            </Link>
+          </div>
+        )}
         </div>
       </nav>
       <div className="pt-20 md:pt-24 lg:pt-28"></div>
